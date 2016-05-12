@@ -1,0 +1,36 @@
+#type       avg     std     min     5th    10th    90th    95th    99th
+read      504.7   102.5   334.9   410.9   437.9   569.3   691.0   995.7
+update      0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+op_q        1.0     0.0     1.0     1.0     1.0     1.1     1.1     1.1
+
+Total QPS = 126.5 (506 / 4.0s)
+
+Misses = 0 (0.0%)
+Skipped TXs = 0 (0.0%)
+
+RX     124982 bytes :    0.0 MB/s
+TX      18216 bytes :    0.0 MB/s
+#type       avg     std     min     5th    10th    90th    95th    99th
+read      507.1   109.8   304.5   391.1   412.9   583.5   724.4  1029.9
+update      0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+op_q        1.0     0.0     1.0     1.0     1.0     1.1     1.1     1.1
+
+Total QPS = 127.7 (511 / 4.0s)
+
+Misses = 0 (0.0%)
+Skipped TXs = 0 (0.0%)
+
+RX     126217 bytes :    0.0 MB/s
+TX      18396 bytes :    0.0 MB/s
+#type       avg     std     min     5th    10th    90th    95th    99th
+read      508.6    98.8   304.5   408.9   426.6   580.5   649.4  1003.0
+update      0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0
+op_q        1.0     0.0     1.0     1.0     1.0     1.1     1.1     1.1
+
+Total QPS = 138.0 (552 / 4.0s)
+
+Misses = 0 (0.0%)
+Skipped TXs = 0 (0.0%)
+
+RX     136344 bytes :    0.0 MB/s
+TX      19872 bytes :    0.0 MB/s

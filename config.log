@@ -1,0 +1,130 @@
+file /home/quyupeng/benchmark/memcached/mutilate-master/SConstruct,line 19:
+	Configure(confdir = .sconf_temp)
+scons: Configure: Checking whether the C++ compiler works... 
+.sconf_temp/conftest_0.cpp <-
+  |
+  |int main()
+  |{
+  |    return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_0.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_0.cpp
+scons: Configure: yes
+
+scons: Configure: Checking for C++ library event... 
+.sconf_temp/conftest_1.cpp <-
+  |
+  |
+  |#include "event2/event.h"
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_1.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_1.cpp
+g++ -o .sconf_temp/conftest_1 .sconf_temp/conftest_1.o -L/opt/local/lib -L/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/lib -levent
+scons: Configure: yes
+
+scons: Configure: Checking whether EVENT_BASE_FLAG_PRECISE_TIMER is declared... 
+.sconf_temp/conftest_2.cpp <-
+  |#include <event2/event.h>
+  |int main()
+  |{
+  |#ifndef EVENT_BASE_FLAG_PRECISE_TIMER
+  |    (void) EVENT_BASE_FLAG_PRECISE_TIMER;
+  |#endif
+  |    ;
+  |    return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_2.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_2.cpp
+.sconf_temp/conftest_2.cpp: In function ‘int main()’:
+.sconf_temp/conftest_2.cpp:5:12: error: ‘EVENT_BASE_FLAG_PRECISE_TIMER’ was not declared in this scope
+     (void) EVENT_BASE_FLAG_PRECISE_TIMER;
+            ^
+scons: Configure: no
+
+scons: Configure: Checking for C++ library pthread... 
+.sconf_temp/conftest_3.cpp <-
+  |
+  |
+  |#include "pthread.h"
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_3.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_3.cpp
+g++ -o .sconf_temp/conftest_3 .sconf_temp/conftest_3.o -L/opt/local/lib -L/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/lib -levent -lpthread
+scons: Configure: yes
+
+scons: Configure: Checking for clock_gettime() in C++ library rt... 
+.sconf_temp/conftest_4.cpp <-
+  |
+  |
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char clock_gettime();
+  |
+  |int
+  |main() {
+  |  clock_gettime();
+  |return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_4.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_4.cpp
+g++ -o .sconf_temp/conftest_4 .sconf_temp/conftest_4.o -L/opt/local/lib -L/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/lib -levent -lpthread -lrt
+scons: Configure: yes
+
+scons: Configure: Checking for C++ library zmq... 
+.sconf_temp/conftest_5.cpp <-
+  |
+  |
+  |#include "zmq.hpp"
+  |
+  |int
+  |main() {
+  |  
+  |return 0;
+  |}
+  |
+g++ -o .sconf_temp/conftest_5.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_5.cpp
+.sconf_temp/conftest_5.cpp:3:19: fatal error: zmq.hpp: No such file or directory
+ #include "zmq.hpp"
+                   ^
+compilation terminated.
+scons: Configure: no
+
+scons: Configure: Checking for C function pthread_barrier_init()... 
+.sconf_temp/conftest_6.c <-
+  |
+  |
+  |#include <assert.h>
+  |
+  |#ifdef __cplusplus
+  |extern "C"
+  |#endif
+  |char pthread_barrier_init();
+  |
+  |int main() {
+  |#if defined (__stub_pthread_barrier_init) || defined (__stub___pthread_barrier_init)
+  |  fail fail fail
+  |#else
+  |  pthread_barrier_init();
+  |#endif
+  |
+  |  return 0;
+  |}
+  |
+gcc -o .sconf_temp/conftest_6.o -c -std=c++0x -D_GNU_SOURCE -I/usr/local/include -I/opt/local/include -I/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/include .sconf_temp/conftest_6.c
+cc1: warning: command line option ‘-std=c++11’ is valid for C++/ObjC++ but not for C [enabled by default]
+gcc -o .sconf_temp/conftest_6 .sconf_temp/conftest_6.o -L/opt/local/lib -L/home/quyupeng/benchmark/memcached/libevent-2.0.21-stable/inst/lib -levent -lpthread -lrt
+scons: Configure: yes
+
+
